@@ -68,12 +68,12 @@ Apify.main(async () => {
     if (restaurantId) {
         log.debug(`Processing restaurant ${restaurantId}`);
         requestList = new Apify.RequestList({
-            sources: [{ url: 'https://www.tripadvisor.com', userData: { restaurantId, restaurantDetail: true } }],
+            sources: [{ url: 'https://www.tripadvisor.de', userData: { restaurantId, restaurantDetail: true } }],
         });
     } else if (hotelId) {
         log.debug(`Processing hotel ${restaurantId}`);
         requestList = new Apify.RequestList({
-            sources: [{ url: 'https://www.tripadvisor.com', userData: { hotelId, hotelDetail: true } }],
+            sources: [{ url: 'https://www.tripadvisor.de', userData: { hotelId, hotelDetail: true } }],
         });
     }
 
