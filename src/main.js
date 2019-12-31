@@ -99,7 +99,7 @@ Apify.main(async () => {
                 const promises = [];
                 for (let i = 0; i <= maxOffset; i += LIMIT) {
                     promises.push(() => requestQueue.addRequest({
-                        url: `https://api.tripadvisor.com/api/internal/1.14/location/${locationId}/hotels?currency=CZK&lang=${global.LANGUAGE}&limit=${LIMIT}&offset=${i}`,
+                        url: `https://api.tripadvisor.com/api/internal/1.14/location/${locationId}/hotels?currency=CZK&lang=de&limit=${LIMIT}&offset=${i}`,
                         userData: { hotelList: true, offset: i, limit: LIMIT },
                     }));
                     log.debug(`Adding location with ID: ${locationId} Offset: ${i.toString()}`);
